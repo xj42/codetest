@@ -3,8 +3,9 @@ using codetest.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllersWithViews();
+
+// register services
 builder.Services.AddSingleton<ICheeseyDataService, CheeseyDataService>();
 
 var app = builder.Build();

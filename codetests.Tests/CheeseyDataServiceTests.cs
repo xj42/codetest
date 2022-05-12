@@ -8,17 +8,15 @@ using System;
 using System.Collections.Concurrent;
 namespace codetests.Tests
 {
+    //a few simple tests
     public class CheeseyDataServiceTests
     {
         [Fact]
         public async void ListProductsTest()
         {
-            //or use this short equivalent
             var logger = new Mock<ILogger<CheeseyDataService>>();
             var controller = new CheeseyDataService(logger.Object);
-
             var res = await controller.ListProducts();
-
             Assert.Equal(5, res.Count());
         }
 

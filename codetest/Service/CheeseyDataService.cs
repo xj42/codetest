@@ -5,7 +5,7 @@ using Microsoft.Extensions.Logging;
 
 namespace codetest.Services;
 
-
+// Interfaces for easier testing
 public interface ICheeseyDataService
 {
     Task<IEnumerable<Cheese>> ListProducts();
